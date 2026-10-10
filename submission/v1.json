@@ -1,0 +1,196 @@
+{
+  "submission_id": "stepwise-math-v1",
+  "name": "Stepwise Math: multi-step math through an exact calculator",
+  "image": "ghcr.io/moarshy/stepwise-math:v1",
+  "schema": {
+    "action": {
+      "additionalProperties": false,
+      "description": "What the model sends: a calculator request or the final answer.",
+      "properties": {
+        "metadata": {
+          "additionalProperties": true,
+          "description": "Additional metadata for the action",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "command": {
+          "description": "\"calc\" evaluates an arithmetic expression; \"submit\" gives the final answer and ends the episode",
+          "enum": [
+            "calc",
+            "submit"
+          ],
+          "title": "Command",
+          "type": "string"
+        },
+        "text": {
+          "description": "For calc: an expression using numbers, + - * / // % ** and brackets, e.g. \"(3/4 + 2) * 5\". For submit: an integer or reduced fraction, e.g. \"42\" or \"7/12\"",
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "command",
+        "text"
+      ],
+      "title": "MathArenaAction",
+      "type": "object"
+    },
+    "observation": {
+      "additionalProperties": false,
+      "description": "What the environment sends back: the problem, a calculator result, or the grade.",
+      "properties": {
+        "done": {
+          "default": false,
+          "description": "Whether the episode has terminated",
+          "title": "Done",
+          "type": "boolean"
+        },
+        "reward": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Reward signal from the last action",
+          "title": "Reward"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "description": "Additional metadata for the observation",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "message": {
+          "default": "",
+          "description": "The problem, the calculator result, or the grading feedback",
+          "title": "Message",
+          "type": "string"
+        },
+        "moves_left": {
+          "default": 0,
+          "description": "Moves remaining before the episode ends with reward 0",
+          "title": "Moves Left",
+          "type": "integer"
+        }
+      },
+      "title": "MathArenaObservation",
+      "type": "object"
+    }
+  },
+  "tasks": [
+    {
+      "task_id": "counting-medium",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    },
+    {
+      "task_id": "counting-hard",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    },
+    {
+      "task_id": "modular-medium",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    },
+    {
+      "task_id": "modular-hard",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    },
+    {
+      "task_id": "sequences-medium",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    },
+    {
+      "task_id": "sequences-hard",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    },
+    {
+      "task_id": "probability-medium",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    },
+    {
+      "task_id": "probability-hard",
+      "split": "train",
+      "reset_wall_s": 120,
+      "rollout_wall_s": 900,
+      "verifier_wall_s": 60,
+      "tool_wall_s": 30,
+      "tool_calls_total": 40,
+      "completion_tokens": 4096,
+      "context_tokens": 16384
+    }
+  ],
+  "example_actions": [
+    {
+      "command": "calc",
+      "text": "2+2"
+    },
+    {
+      "command": "submit",
+      "text": "0"
+    }
+  ],
+  "finish_action": {
+    "command": "submit",
+    "text": ""
+  },
+  "dataset": "arshy/stepwise-math",
+  "source": "https://github.com/moarshy/stepwise-math"
+}
