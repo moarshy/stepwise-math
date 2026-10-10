@@ -1,0 +1,40 @@
+divisibility-medium  seed=1000 correct                  answer=407
+divisibility-medium  seed=1001 correct                  answer=1414
+divisibility-medium  seed=1002 correct                  answer=1317
+divisibility-medium  seed=1003 correct                  answer=1254
+divisibility-medium  seed=1004 correct                  answer=3280
+divisibility-hard    seed=1000 wrong                    answer=2261
+divisibility-hard    seed=1001 wrong                    answer=2873
+divisibility-hard    seed=1002 wrong                    answer=682
+divisibility-hard    seed=1003 wrong                    answer=793
+divisibility-hard    seed=1004 wrong                    answer=3423
+sequences-medium     seed=1000 wrong                    answer=7888
+sequences-medium     seed=1001 wrong                    answer=7157
+sequences-medium     seed=1002 correct                  answer=6831
+sequences-medium     seed=1003 wrong                    answer=34892
+sequences-medium     seed=1004 correct                  answer=148070
+algebra-medium       seed=1000 wrong                    answer=30
+algebra-medium       seed=1001 wrong                    answer=34
+algebra-medium       seed=1002 wrong                    answer=18
+algebra-medium       seed=1003 wrong                    answer=8
+algebra-medium       seed=1004 wrong                    answer=4
+algebra-hard         seed=1000 wrong                    answer=13
+algebra-hard         seed=1001 wrong                    answer=1
+algebra-hard         seed=1002 wrong                    answer=11
+algebra-hard         seed=1003 wrong                    answer=8
+algebra-hard         seed=1004 wrong                    answer=-8
+probability-hard     seed=1000 wrong                    answer=14/57
+probability-hard     seed=1001 wrong                    answer=8/51
+probability-hard     seed=1002 correct                  answer=9/34
+probability-hard     seed=1003 correct                  answer=24/91
+probability-hard     seed=1004 correct                  answer=5/26
+
+task                   solved  outcomes
+divisibility-medium    5/5     {'correct': 5}
+divisibility-hard      0/5     {'wrong': 5}
+sequences-medium       2/5     {'wrong': 3, 'correct': 2}
+algebra-medium         0/5     {'wrong': 5}
+algebra-hard           0/5     {'wrong': 5}
+probability-hard       3/5     {'wrong': 2, 'correct': 3}
+
+tokens: 100,578 in, 3,481 out; transcripts in calibration/run3.jsonl

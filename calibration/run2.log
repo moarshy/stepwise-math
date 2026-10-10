@@ -1,0 +1,76 @@
+word-medium          seed=1000 correct                  answer=120
+word-medium          seed=1001 correct                  answer=43
+word-medium          seed=1002 correct                  answer=76
+word-medium          seed=1003 correct                  answer=112
+word-medium          seed=1004 correct                  answer=150
+word-hard            seed=1000 correct                  answer=24
+word-hard            seed=1001 correct                  answer=2
+word-hard            seed=1002 correct                  answer=880/113
+word-hard            seed=1003 correct                  answer=315/44
+word-hard            seed=1004 correct                  answer=120/49
+counting-medium      seed=1000 correct                  answer=352
+counting-medium      seed=1001 correct                  answer=55
+counting-medium      seed=1002 correct                  answer=7007
+counting-medium      seed=1003 wrong                    answer=2717
+counting-medium      seed=1004 correct                  answer=352
+counting-hard        seed=1000 wrong                    answer=30
+counting-hard        seed=1001 correct                  answer=10
+counting-hard        seed=1002 wrong                    answer=1120
+counting-hard        seed=1003 correct                  answer=1680
+counting-hard        seed=1004 wrong                    answer=92400
+modular-medium       seed=1000 wrong                    answer=12
+modular-medium       seed=1001 correct                  answer=1
+modular-medium       seed=1002 wrong                    answer=21
+modular-medium       seed=1003 correct                  answer=1
+modular-medium       seed=1004 correct                  answer=0
+modular-hard         seed=1000 wrong                    answer=81
+modular-hard         seed=1001 wrong                    answer=1
+modular-hard         seed=1002 wrong                    answer=17
+modular-hard         seed=1003 wrong                    answer=29
+modular-hard         seed=1004 correct                  answer=69
+sequences-medium     seed=1000 correct                  answer=8106
+sequences-medium     seed=1001 correct                  answer=4620
+sequences-medium     seed=1002 correct                  answer=4843
+sequences-medium     seed=1003 correct                  answer=22176
+sequences-medium     seed=1004 correct                  answer=6432
+sequences-hard       seed=1000 correct                  answer=48
+sequences-hard       seed=1001 wrong                    answer=1
+sequences-hard       seed=1002 wrong                    answer=248746
+sequences-hard       seed=1003 correct                  answer=94642
+sequences-hard       seed=1004 wrong                    answer=-320
+algebra-medium       seed=1000 wrong                    answer=13
+algebra-medium       seed=1001 wrong                    answer=1
+algebra-medium       seed=1002 wrong                    answer=11
+algebra-medium       seed=1003 wrong                    answer=8
+algebra-medium       seed=1004 wrong                    answer=-8
+algebra-hard         seed=1000 wrong                    answer=-21
+algebra-hard         seed=1001 wrong                    answer=8
+algebra-hard         seed=1002 wrong                    answer=39
+algebra-hard         seed=1003 wrong                    answer=20
+algebra-hard         seed=1004 wrong                    answer=-17
+probability-medium   seed=1000 wrong                    answer=1/6
+probability-medium   seed=1001 wrong                    answer=1/6
+probability-medium   seed=1002 correct                  answer=5/12
+probability-medium   seed=1003 correct                  answer=7/12
+probability-medium   seed=1004 correct                  answer=7/12
+probability-hard     seed=1000 wrong                    answer=253/380
+probability-hard     seed=1001 wrong                    answer=12/17
+probability-hard     seed=1002 wrong                    answer=45/68
+probability-hard     seed=1003 wrong                    answer=43/65
+probability-hard     seed=1004 wrong                    answer=249/364
+
+task                   solved  outcomes
+word-medium            5/5     {'correct': 5}
+word-hard              5/5     {'correct': 5}
+counting-medium        4/5     {'correct': 4, 'wrong': 1}
+counting-hard          2/5     {'wrong': 3, 'correct': 2}
+modular-medium         3/5     {'wrong': 2, 'correct': 3}
+modular-hard           1/5     {'wrong': 4, 'correct': 1}
+sequences-medium       5/5     {'correct': 5}
+sequences-hard         2/5     {'correct': 2, 'wrong': 3}
+algebra-medium         0/5     {'wrong': 5}
+algebra-hard           0/5     {'wrong': 5}
+probability-medium     3/5     {'wrong': 2, 'correct': 3}
+probability-hard       0/5     {'wrong': 5}
+
+tokens: 300,915 in, 8,831 out; transcripts in calibration/run2.jsonl
